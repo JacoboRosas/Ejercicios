@@ -1,3 +1,18 @@
+ /*
+ @@
+ @@ Instituto Tecnologico de Tijuana
+ @@ Depto de Sistemas y Computación
+ @@ Ing. En Sistemas Computacionales
+ @@   
+ @@ Autor : Jacobo Rosas Jonathan Adalberto @nickname JacoboRosas
+ @@ Repositorio: http://github.com/JacoboRosas/Ejercicios
+ @@ Fecha de revisión: 10/15/2020
+ @@ 
+ @@
+ @@ Objetivo del programa:
+ @@ Para cada una de las siguientes parejas de números, encontrar el máximo común divisor: 60, 12; 35, 10; 28, 32; 65, 179; 210, 1036
+ @@ 
+ */
 #include <iostream>
 #include <math.h>
 
