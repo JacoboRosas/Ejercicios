@@ -1,3 +1,17 @@
+ /*
+ @@
+ @@ Instituto Tecnologico de Tijuana
+ @@ Depto de Sistemas y Computación
+ @@ Ing. En Sistemas Computacionales
+ @@   
+ @@ Autor : Jacobo Rosas Jonathan Adalberto @nickname JacoboRosas
+ @@ Repositorio: http://github.com/JacoboRosas/Ejercicios
+ @@ Fecha de revisión: 10/15/2020
+ @@ 
+ @@ Objetivo del programa:
+ @@ Encontrar la solución para la ecuación exponencial A^x = B, donde A=3 y B=81.
+ @@ 
+ */
 #include <iostream>
 #include <math.h>
 
