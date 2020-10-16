@@ -1,3 +1,20 @@
+/*
+ @@
+ @@ Instituto Tecnologico de Tijuana
+ @@ Depto de Sistemas y Computación
+ @@ Ing. En Sistemas Computacionales
+ @@   
+ @@ Autor : Jacobo Rosas Jonathan Adalberto @nickname JacoboRosas
+ @@ Repositorio: http://github.com/JacoboRosas/Ejercicios
+ @@ Fecha de revisión: 10/15/2020
+ @@ 
+ @@ Objetivo del programa:
+ @@ Dados los valores de las constantes a, b, c y d, y de la variable x, que se introdurián al programa, escribir un programa que calcula la función determinada para:
+ @@       ax^2 + bx + c si x < d
+ @@ f(x)= 0             si x = d
+ @@       -ax^2 + bx - c si x > d
+ @@
+ */
 #include <iostream>
 #include <math.h>
 
