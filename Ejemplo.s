@@ -1,16 +1,46 @@
-@ use_gdb.s
-@ demo program
-.section	.data
-.section	.text
-.globl		_start
-_start:
-mov r1, $5	@ load r1 with 5
-cmp r1, $4	@ compare r1 with 4
-sub r1, r1, $1	@ subtract 1 
-cmp r1, $4      @ r1 now DOES equal 4
-sub r1, r1, $1
-cmp r1, $4
+@ greet.s - a little asm greeter.
+@ programa corto que obtiene la entrada del teclado y luego lo imprime de nuevo en la pantalla.
 
-mov r7, $1	@ exit syscall
-svc $0		@ wake kernel
+
+.section	.bss
+.comm buffer, 48	     @ reserve 48 byte buffer
+
+.section	.data
+msg:
+	.ascii	"** Greeter **\nPlease enter your name: "
+msgLen = . - msg
+msg2:
+	.ascii	"Hello "
+msg2Len = . - msg2
+
+.section	.text
+.globl	_start
+_start:
+
+mov r0, $1		    @ print program's opening message	
+ldr r1, =msg
+ldr r2, =msgLen
+mov r7, $4
+svc $0
+
+mov r7, $3		    @ read syscall
+mov r0, $1		
+ldr r1, =buffer
+mov r2, $0x30
+svc $0
+
+mov r0, $1		    @ print msg2
+ldr r1, =msg2
+ldr r2, =msg2Len
+mov r7, $4
+svc $0
+
+mov r0, $1		    @ now print the user input
+ldr r1, =buffer
+mov r2, $0x30
+mov r7, $4
+svc $0
+
+mov r7, $1	            @ exit syscall
+svc $0		            @ wake kernel
 .end
